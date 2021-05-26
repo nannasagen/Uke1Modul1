@@ -11,88 +11,55 @@
     body{
         display: grid;
         align-items: center;
-        justify-content: center;
-
-        
+        justify-content: center;  
     }
-
-
-
-
-.buttons{
- 
-
-
-
-display: flex;
-grid-template-columns: 70px;
-grid-template-rows: 4px;
-
+   
+    .buttons{
+    display: flex;
+    grid-template-columns: 70px;
+    grid-template-rows: 4px;      
+    }
+    
+    .box{
+        width: 68px;
+        background-color: lightsteelblue;
+        height: 15px;
+        border: 1px solid black;
+    }
+    </style>
+    
+    <div class="box" <p id="siffer"></p>
+        ></div>
+    
+        <div id="buttons">       
+            <button id="b1" onclick="button(1)">1</button><button id="b2" onclick="button(2)">2</button><button id="b3" onclick="button(3)">3</button><br>
+            <button id="b4" onclick="button(4)">4</button><button id="b5" onclick="button(5)">5</button><button id="b6" onclick="button(6)">6</button><br>
+            <button  id="7" onclick="button(7)">7</button><button id="b8" onclick="button(8)">8</button><button id="b9" onclick="button(9)">9</button><br>
+            <button id="b0" onclick="button(0)">0</button> 
+            
+            <button onclick= "press()">Go</button>
+                    </div>
         
-}
-
-.box{
-
-    width: 62px;
-    background-color: lightsteelblue;
-    
-
-}
-</style>
-
-
-<body>
-    
-
-
-<div id="box" box height: 15px; width: 62px; border: 1px;  ></div>
-
-
-
-    <div id="buttons">
         
-      
+                    
+                    <script> 
+                        var go = "";
+                        function button(x) {
+                            go += x;
+                            document.getElementById("siffer").innerHTML = go;
+                        }
+                        function press() {
+                            var value = parseInt(go);
+                            if(value === 3812) 
+                                alert("Riktig! :D");
+                            else {
+                                alert("Prøv igjen!")
+                            }
+                        }
+                    </script>
+                    
     
-<p id="koden"></p>
-        <button id="b1" onclick="button(1)">1</button><button id="b2" onclick="button(2)">2</button><button id="b3" onclick="button(3)">3</button><br>
-        <button id="b4" onclick="button(4)">4</button><button id="b5" onclick="button(5)">5</button><button id="b6" onclick="button(6)">6</button><br>
-        <button  id="7" onclick="button(7)">7</button><button id="b8" onclick="button(8)">8</button><button id="b9" onclick="button(9)">9</button><br>
-        <button id="b0" onclick="button(0)">0</button> 
-        
-        <button onclick="go()">Go</button>
-                </div>
     
-    
-
-        
-    
-                
-<script>
-
-function go(){
-
-if(value === 3812)
-document.box.style.color()
-//document.getElementById('input').setAttribute()
-    else 
-    alert('Try again!')
-
-
-}
-
-
-function button(x){
-    go += x;
-    document.getElementById('koden').innerHTML= go;
-
-}
-
-
-
-
-</script>
-
-
 
 
 </body>
