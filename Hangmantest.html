@@ -2,41 +2,41 @@
 <meta charset="utf-8">
 <title>Test Suite</title>
 <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.15.0.css">
-<body>
-  <div id="qunit"></div>
-  <div id="qunit-fixture"></div>
-  <script src="https://code.jquery.com/qunit/qunit-2.15.0.js"></script>
-  <script src="Hangman.js"></script>
-  
-  <script>
-   
-    function updateView(){
- 
-    }
-   
-    function key(){
- 
-    }
 
-   function checkWin(){
- 
-   }
-    QUnit.test("key", function (assert) {
-      const actual = key('V');
-      const expected = `riktig`;
-      assert.equal(actual, expected);
-    });
-    QUnit.test("keywrong", function (assert) {
-      const actual = key('U');
-      const expected = `feil`;
-      assert.equal(actual, expected);
-    });
-    
-    QUnit.test("check", function (assert) {
-      const actual = checkWin();
-      const expected = `stå på`;
-      assert.equal(actual, expected);
-    });
-    
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-2.15.0.js"></script>
+    <script src="Hangman.js"></script>
+
+    <script>
+
+        function updateView() {
+
+        }
+
+        QUnit.test("check uten verdi", function (assert) {
+            const actual = checkWin();
+            const expected = `stå på`;
+            assert.equal(actual, expected);
+        });
+        QUnit.test("key", function (assert) {
+            const actual = key('V');
+            const expected = 'riktig';
+            assert.equal(actual, expected);
+        });
+        QUnit.test("keywrong", function (assert) {
+            const actual = key('U');
+            const expected = `feil`;
+            assert.equal(actual, expected);
+        });
+
+        QUnit.test("check med riktig svar", function (assert) {
+            guess = ["V", "E", "K", "S", "T"]
+            const actual = checkWin();
+            const expected = `Du vant`;
+            assert.equal(actual, expected);
+        });
+
     </script>
 </body>

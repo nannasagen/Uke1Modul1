@@ -1,6 +1,16 @@
 body{
     background-color: rgb(99, 199, 202);
     display: grid;
+    align-items: center;
+    justify-items: center;
+}
+h1{
+    font-family:sans-serif;
+    color: rgb(9, 75, 136);
+}
+h2{
+    font-family: sans-serif;
+    color: rgb(15, 121, 121);
 }
 .buttons{
     position: relative;
@@ -12,7 +22,8 @@ body{
     position: relative;
     float: left;
     top: 35vh;
-    width: 20px;
+    width: 30px;
     height: 25px;
     border: solid black 1px;
+    text-align: center;
 }
